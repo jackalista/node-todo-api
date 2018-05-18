@@ -40,5 +40,15 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) =>{
   //   console.log(result.ops[0]._id.getTimestamp());
   // });
 
+  db.collection('Todos').insertOne({
+    text: 'repark the cars',
+    completed: false
+  }).then((response) => {
+    console.log('New User Respoinse: ');
+    console.log(JSON.stringify(response, undefined, 2));
+  }, (err) => {
+    console.log('Unable to create todos', err);
+  });
+
   client.close();
 });
