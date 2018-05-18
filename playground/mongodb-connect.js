@@ -44,7 +44,7 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) =>{
     text: 'repark the cars',
     completed: false
   }).then((response) => {
-    console.log('New User Respoinse: ');
+    console.log('New User Response: ');
     console.log(JSON.stringify(response, undefined, 2));
   }, (err) => {
     console.log('Unable to create todos', err);
