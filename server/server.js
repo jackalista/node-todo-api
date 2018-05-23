@@ -27,6 +27,7 @@ app.post('/todos', (req, res) => {
   });
 });
 
+/* GET /todos (all) */
 app.get('/todos', (req, res) => {
   Todo.find().then((todos) => {
     // create an object & pass array todos (ES6) set to array: prop
