@@ -46,4 +46,4 @@ var Record = mongoose.model('Product', {
   }
 });
 
-module.exports = {Record};
+module.exports = {Product};
