@@ -30,7 +30,7 @@ app.post('/todos', (req, res) => {
 /* GET /todos (all) */
 app.get('/todos', (req, res) => {
   Todo.find().then((todos) => {
-    // create an object & pass array todos (ES6) set to array: prop
+    // create an object & pass array todos (ES6) set to todos: prop (so just {todos})
     //so we can add props later, etc.
     res.send({todos});
   }, (e) => {
